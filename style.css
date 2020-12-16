@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* height: 100vh;
+    width: 100%; */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Light-grayish-blue);
+}
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    padding: 30px;
+}
+.testimonials-card {
+    border-radius: 7px;
+    padding: 30px;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease-in-out;
+}
+.testimonials-card:hover {
+    opacity: 95%;
+    transform: translateY(6px);
+}
+.testimonials-card h3 {
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.testimonials-card p {
+    opacity: 70%;
+}
+.card-primary-1 {
+    background-color: var(--Moderate-violet);
+    color: var(--White);
+    position: relative;
+}
+.bg-quotation {
+    position: absolute;
+    top: 0%;
+    right: 18%;
+    z-index: -1;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;  
+}
+.avatar img {
+    width: 30px;
+    border-radius: 50%;
+}
+.avatar h4 {
+    padding-left: 10px;
+}
+.avatar span {
+    padding-left: 0px;
+    display: block;
+    opacity: 50%;
+}
+.card-primary-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    color: var(--White);
+}
+.card-primary-3 {
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+.card-primary-4 {
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+}
+.card-primary-5 {
+    background-color: var(--Very-dark-blackish-blue);
+    color: var(--White);
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(auto, 330px));
+        margin: 32px 0;
+    }
+    .card-1 {
+        grid-column: 1 / 3;
+    }
+    .card-2 {
+        grid-column: 3 / 4;
+    }
+    .card-3 {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+    .card-4 {
+        grid-column: 1 / 2;
+    }
+    .card-5 {
+        grid-column: 2 / 4;
+        
+    }
+    .testimonials-card h3 {
+        font-size: 25px;
+    }
+    .testimonials-card p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+@media only screen and (width: 1024px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(auto, 500px));
+    } 
+}  
