@@ -89,7 +89,12 @@ body {
     background-color: var(--Very-dark-blackish-blue);
     color: var(--White);
 }
-
+.attribution { 
+    font-size: 15px;
+   text-align: center; }
+.attribution a {
+    color: hsl(240, 100%, 10%);
+}
 @media only screen and (min-width: 769px) {
     .container {
         grid-template-columns: repeat(4, 1fr);
